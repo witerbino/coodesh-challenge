@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Sale {
+  id      String   @id @default(uuid())
+  type    TypeSale
+  date    DateTime
+  product String
+  value   String
+  seller  String
+
+  @@map("sales")
+}
+
+enum TypeSale {
+  VENDA_PRODUTOR
+  VENDA_AFILIADO
+  COMISSAO_PAGA
+  COMISSAO_RECEBIDA
+}

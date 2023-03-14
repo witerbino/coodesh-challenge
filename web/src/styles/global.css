@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-200 flex justify-center w-screen h-screen pt-10;
+}
+
+.content {
+  @apply bg-slate-50 p-5 rounded-md w-[960px];
+}

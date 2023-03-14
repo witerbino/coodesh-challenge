@@ -1,0 +1,26 @@
+version: '3.0'
+
+services:
+  app-api:
+    build: ./api
+    container_name: app-api
+    ports:
+      - 4000:4000
+    depends_on:
+      - app-database
+
+  app-web:
+    build: ./web
+    container_name: app-web
+    ports:
+      - 8080:80
+
+  app-database:
+    image: postgres:13.4-alpine
+    container_name: app-database
+    environment:
+      - POSTGRES_DB=coodesh
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 5432:5432

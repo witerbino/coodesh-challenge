@@ -1,0 +1,19 @@
+.table {
+  @apply w-full text-gray-400 text-sm text-center;
+}
+
+.table__th {
+  @apply py-5;
+}
+
+.table__td {
+  @apply py-7;
+}
+
+.table__tbody {
+  @apply divide-y divide-gray-200;
+}
+
+.table__tr {
+  @apply hover:bg-gray-100 hover:cursor-pointer;
+}
