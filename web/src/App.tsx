@@ -1,7 +1,7 @@
 import { InputFile } from './components/InputFile'
 import { Table } from './components/Table'
 
-// import Logo from '../src/assets/coodesh.svg'
+// import Logo from '../src/assets/coodesh.svg';
 
 export function App() {
   return (
